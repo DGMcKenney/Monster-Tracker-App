@@ -11,7 +11,7 @@
         <tr>
             <td><a href="{% url 'monster_details' id=m.id %}">{{ m.monster_type }}</a></td>
             <td>{{ m.monster_name }}</td>
-            <td>{{ m.monster_description }}</td>
+            <td>{{ m.monster_details }}</td>
         </tr>
     {% endfor %}
 </table>
