@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Sightings</h1>
+<table class = 'table'>
+    <tr>
+        <th>Sighting #:</th>
+        <th>Monster</th>
+        <th>Day of Sighting</th>
+        <th>Sighting Location</th>
+        <th>Description of Sighting</th>
+    </tr>
+    {% for s in sighting_list %}
+        <tr>
+            <td><a href="{% url 'sighting_details' id=s.id %}">{{ s.id }}</a></td>
+            <td>{{ s.which_monster }}</td>
+            <td>{{ s.when }}</td>
+            <td>{{ s.where }}</td>
+            <td>{{ s.description }}</td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}

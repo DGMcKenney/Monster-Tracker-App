@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>{{ sighting_deets.which_monster }}</h2>
+<p>Day of Sighting: {{ sighting_deets.when }}</p>
+<p>Sighting Location: {{ sighting_deets.where }}</p>
+<p>Description of Sighting: {{ sighting_deets.description }}</p>
+
+{% endblock %}
